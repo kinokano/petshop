@@ -1,0 +1,91 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.red{
+    background-color: #893652;
+    color: white;
+
+}
+
+.red:hover{
+    background-color: #cf527c;
+    transition: 0.5s;
+}
+
+.blue{
+    background-color: #175ea8;
+    color: white;
+}
+
+.blue:hover{
+    background-color: #3687dd;
+    transition: 0.5s;
+}
+
+.white{
+    background-color: #7078ac;
+}
+
+.white:hover{
+    background-color: #9ca2ca;
+    transition: 0.5s;
+}
+
+.cian{
+    background-color: #b6ebd2;
+}
+
+.cian:hover{
+    background-color: #d3f8e7;
+    transition: 0.5s;
+}
+
+.main h1{
+    margin-bottom: 20px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 30px;
+    text-align: center;
+}
+
+.servico button{
+    width: 200px;
+    height: 100px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 10px;
+}
+
+.servico button:hover{
+    cursor: pointer;
+}
+
+
+.servico h2{
+    font-size:larger;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      margin: 5px;
+    }
+    .grid{
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr ;
+    }
+    .servico button{
+        width: 400px;
+    }
+  }

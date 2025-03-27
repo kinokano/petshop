@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'css/user/index.css' %}">
+
+<div class="main">
+
+        <h1>Escolha o serviço que deseja</h1>
+
+        <div class="grid">
+            <div class="servico ">
+                <a href="reserva/">
+                <button class="red">Atendimento Veterinário</button>
+                </a>
+            </div>
+
+            <div class="servico ">
+                <a href="reserva/">
+                <button class="blue">Banho & Tosa</button>
+                </a>
+            </div>
+
+            <div class="servico ">
+                <a href="reserva/">
+                <button class="white">Adote</button>
+                </a>
+            </div>
+
+            <div class="servico ">
+                <a href="reserva/">
+                <button class="cian">Adestramento</button>
+                </a>
+            </div>
+        </div>
+
+
+</div>
+
+
+
+{% endblock %}
