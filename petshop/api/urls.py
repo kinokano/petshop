@@ -7,6 +7,12 @@ from rest_framework.routers import DefaultRouter
 urlpatterns = [
 
     path('', index, name='index'),
-    path('reserva/', reserva, name='reserva')
+    path('api/users/', User.as_view()),
+    path('api/login/', Login.as_view()),
+
+    path('reserva/', reserva, name='reserva'),
+    path('loginAdm/', loginAdm, name='loginAdm'),
+    path('indexAdm/', indexAdm, name='indexAdm'),
+    
 
 ]

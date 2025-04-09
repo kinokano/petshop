@@ -5,41 +5,48 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/user/index.css' %}">
-
-<div class="main">
-
-        <h1>Escolha o serviço que deseja</h1>
-
-        <div class="grid">
-            <div class="servico ">
-                <a href="reserva/">
-                <button class="red">Atendimento Veterinário</button>
-                </a>
-            </div>
-
-            <div class="servico ">
-                <a href="reserva/">
-                <button class="blue">Banho & Tosa</button>
-                </a>
-            </div>
-
-            <div class="servico ">
-                <a href="reserva/">
-                <button class="white">Adote</button>
-                </a>
-            </div>
-
-            <div class="servico ">
-                <a href="reserva/">
-                <button class="cian">Adestramento</button>
-                </a>
-            </div>
-        </div>
-
-
-</div>
-
-
+<div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 px-4 py-8">
+  
+    <!-- Logo -->
+    <div class="mb-6">
+      <img src="{% static 'img/petshop.png' %}" alt="Logo Petshop" class="w-48 sm:w-60 h-auto"/>
+    </div>
+  
+    <!-- Título -->
+    <div class="mb-8 text-center">
+      <h1 class="text-2xl font-bold text-gray-800">Escolha o serviço que deseja</h1>
+    </div>
+  
+    <!-- Botões -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-md w-full sm:max-w-xl">
+      
+      <a href="reserva/" class="w-full">
+        <button class="w-full py-6 rounded-2xl bg-pink-600 text-white text-lg font-semibold shadow-md hover:bg-pink-700 transition duration-300">
+          Atendimento Veterinário
+        </button>
+      </a>
+  
+      <a href="reserva/" class="w-full">
+        <button class="w-full py-6 rounded-2xl bg-blue-600 text-white text-lg font-semibold shadow-md hover:bg-blue-700 transition duration-300">
+          Banho & Tosa
+        </button>
+      </a>
+  
+      <a href="reserva/" class="w-full">
+        <button class="w-full py-6 rounded-2xl bg-indigo-500 text-white text-lg font-semibold shadow-md hover:bg-indigo-600 transition duration-300">
+          Adote
+        </button>
+      </a>
+  
+      <a href="reserva/" class="w-full">
+        <button class="w-full py-6 rounded-2xl bg-emerald-400 text-white text-lg font-semibold shadow-md hover:bg-emerald-500 transition duration-300">
+          Adestramento
+        </button>
+      </a>
+  
+    </div>
+  </div>
+  
+  
 
 {% endblock %}
