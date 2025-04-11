@@ -72,3 +72,7 @@ class Login(APIView):
             return Response({"status": status.HTTP_200_OK})
         else:
             return Response({"mensagem": "Usuario nao encontrado!", "status": status.HTTP_401_UNAUTHORIZED})
+
+class AgendaViewSet(viewsets.ModelViewSet):
+    queryset = Agenda.objects.all()
+    serializer_class = AgendaSerializer

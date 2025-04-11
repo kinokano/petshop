@@ -15,5 +15,8 @@ class Agenda(models.Model):
     hora = models.TimeField()
     statusChoices = [('Pendente ', 'Pendente '), ('Confirmado ', 'Confirmado '), ('Concluído ', 'Concluído '), ('Cancelado ', 'Cancelado ')]
     status = models.CharField(max_length=100, choices=statusChoices, default='Pendente ')
-    
+    servicoChoices = [('Veterinario', 'Atendimento Veterinário'),('BanhoTosa', 'Banho & Tosa'),('Adestramento', 'Adestramento'),('Adocao', 'Adoção'),]
+    servico = models.CharField(max_length=20, choices=servicoChoices)
 
+    def __str__(self):
+        return self.nomeCliente

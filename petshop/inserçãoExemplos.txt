@@ -1,0 +1,49 @@
+executar: python manage.py shell
+
+colar:
+
+from api.models import Agenda
+from datetime import date, time
+
+# Limpa agendamentos anteriores (opcional)
+Agenda.objects.all().delete()
+
+dados_exemplo = [
+    # Dia 12
+    ("João", "cachorro", "Rex", "medio", date(2025, 4, 12), time(9, 0)),
+    ("Maria", "gato", "Mimi", "pequeno", date(2025, 4, 12), time(10, 0)),
+    ("Carlos", "cachorro", "Thor", "grande", date(2025, 4, 12), time(11, 0)),
+    ("Ana", "gato", "Luna", "medio", date(2025, 4, 12), time(14, 0)),
+
+    # Dia 13
+    ("Pedro", "cachorro", "Bolt", "grande", date(2025, 4, 13), time(9, 30)),
+    ("Laura", "gato", "Nina", "pequeno", date(2025, 4, 13), time(11, 30)),
+    ("Paulo", "outro", "Tartaruga", "pequeno", date(2025, 4, 13), time(13, 0)),
+    ("Bruna", "cachorro", "Max", "medio", date(2025, 4, 13), time(15, 0)),
+
+    # Dia 14
+    ("Juliana", "cachorro", "Bob", "medio", date(2025, 4, 14), time(8, 0)),
+    ("Renato", "gato", "Felix", "pequeno", date(2025, 4, 14), time(10, 30)),
+    ("Tati", "cachorro", "Spike", "grande", date(2025, 4, 14), time(12, 30)),
+    ("Caio", "cachorro", "Luke", "medio", date(2025, 4, 14), time(16, 30)),
+
+    # Dia 15
+    ("Sandra", "gato", "Bella", "pequeno", date(2025, 4, 15), time(9, 0)),
+    ("Luiz", "outro", "Coelho", "pequeno", date(2025, 4, 15), time(10, 30)),
+    ("Beatriz", "cachorro", "Léo", "medio", date(2025, 4, 15), time(14, 30)),
+    ("Joana", "gato", "Simba", "pequeno", date(2025, 4, 15), time(17, 0)),
+]
+
+for nome, especie, nome_pet, porte, data, hora in dados_exemplo:
+    Agenda.objects.create(
+        nomeCliente=nome,
+        telefone="(11) 90000-0000",
+        especiePet=especie,
+        nomePet=nome_pet,
+        portePet=porte,
+        data=data,
+        hora=hora,
+        status="Pendente "
+    )
+
+print("Agendamentos de exemplo criados com sucesso!")
