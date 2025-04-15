@@ -81,3 +81,12 @@ def loginAdm(request):
 
 def indexAdm(request):
     return render(request, 'adm/indexAdm.html')
+
+def agendamentos(request):
+    return render(request, 'adm/agendamentos.html')
+
+def clientes(request):
+    return render(request, 'adm/clientes.html')
+
+def relatorios(request):
+    return render(request, 'adm/relatorios.html')

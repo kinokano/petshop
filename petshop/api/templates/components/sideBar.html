@@ -1,0 +1,35 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/adm/sideBar.css' %}">
+
+<div class="sidebar">
+    <div class="sidebar-item">
+        <button id="inicio" class="sidebar-button active">
+            <img src="{% static 'img/inicio.png' %}" alt="Início">
+            <p>Início</p>
+        </button>
+    </div>
+    
+    <div class="sidebar-item">
+        <button id="agendamentos" class="sidebar-button">
+            <img src="{% static 'img/agendamentos.png' %}" alt="Agendamentos">
+            <p>Agendamentos</p>
+        </button>
+    </div>
+    
+    <div class="sidebar-item">
+        <button id="clientes" class="sidebar-button">
+            <img src="{% static 'img/clientes.png' %}" alt="Clientes">
+            <p>Clientes</p>
+        </button>
+    </div>
+    
+    <div class="sidebar-item">
+        <button id="relatorios" class="sidebar-button">
+            <img src="{% static 'img/relatorios.png' %}" alt="Relatórios">
+            <p>Relatórios</p>
+        </button>
+    </div>
+</div>
+
+<script src="{% static 'js/adm/sideBar.js' %}"></script>
