@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const porte = document.getElementById('porte').value;
     const data = document.getElementById('data').value;
     const horario = document.getElementById('horarioSelecionado').value;
-
+    const tipo_servico = document.getElementById('tipo_servico').value;
     const telefoneValido = /^\(\d{2}\)\s\d{5}-\d{4}$/.test(telefone);
 
     if (!telefoneValido) {
@@ -94,10 +94,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
   
-    if (!nome || !telefone || !nome_animal || !especie || !porte || !data || !horario) {
+    if (!nome || !telefone || !nome_animal || !especie || !porte || !data || !horario || !tipo_servico) {
       e.preventDefault();
       alert("Por favor, preencha todos os campos obrigatórios corretamente antes de agendar.");
       return;
+      
     }
 
 

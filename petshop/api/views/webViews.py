@@ -80,7 +80,8 @@ def loginAdm(request):
     return render(request, 'adm/loginAdm.html')
 
 def indexAdm(request):
-    return render(request, 'adm/indexAdm.html')
+    agendamentos = Agenda.objects.all()
+    return render(request, 'adm/indexAdm.html', {"agendamentos" : agendamentos})
 
 def agendamentos(request):
     return render(request, 'adm/agendamentos.html')

@@ -19,4 +19,5 @@ class Agenda(models.Model):
     servico = models.CharField(max_length=20, choices=servicoChoices)
 
     def __str__(self):
+        
         return self.nomeCliente
