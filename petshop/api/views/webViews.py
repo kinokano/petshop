@@ -38,6 +38,7 @@ def reserva(request):
         porte = request.POST.get("porte")
         data_str = request.POST.get("data")
         hora_str = request.POST.get("horario")
+        tipo_servico = request.POST.get("tipo_servico")
 
         # Validação: data não pode ser no passado
         data_agendamento = datetime.strptime(data_str, "%Y-%m-%d").date()
@@ -57,7 +58,8 @@ def reserva(request):
             portePet=porte,
             data=data_agendamento,
             hora=datetime.strptime(hora_str, "%H:%M").time(),
-            status="Pendente "
+            status="Pendente ",
+            servico =tipo_servico
         )
 
 

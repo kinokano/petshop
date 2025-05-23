@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const horario = document.getElementById('horarioSelecionado').value;
     const tipo_servico = document.getElementById('tipo_servico').value;
     const telefoneValido = /^\(\d{2}\)\s\d{5}-\d{4}$/.test(telefone);
+ 
 
     if (!telefoneValido) {
       e.preventDefault();
